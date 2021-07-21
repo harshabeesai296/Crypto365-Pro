@@ -1,0 +1,17 @@
+.uniswap iframe {
+  border: 0;
+  margin: 0 auto;
+  display: block;
+  height: 660px;
+  width: 100%;
+  border-radius: 30px;
+  max-width: 1200px;
+  min-width: 800px;
+  margin-top: 2 00px;
+}
+
+.uniswap h1 {
+  text-align: center;
+  margin: 100px 100px 50px 100px;
+  color: hotpink;
+}
