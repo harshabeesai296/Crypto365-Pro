@@ -52,10 +52,11 @@
   border-radius: 8px;
   color: white;
   font-size: 12px;
-  margin-left: 10px;
   font-weight: 600;
   line-height: 18px;
   border: none;
+  margin-right: -10px;
+
 }
 .header-login button:hover {
   background-color: rgb(41, 72, 184);
@@ -77,6 +78,8 @@
   font-weight: 600;
   line-height: 18px;
   border: none;
+    margin-left: -500px;
+
 }
 
 .header-signup {
