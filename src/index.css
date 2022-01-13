@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  border: 0;
   font-family: Inter, -apple-system, BlinkMacSystemFont, "segoe ui", Roboto,
     Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
 }

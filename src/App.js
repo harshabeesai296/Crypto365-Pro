@@ -1,49 +1,34 @@
 import Header from "./components/Header/Header";
-import TopFiveCrypto from "./components/TopFiveCrypto/TopFiveCrypto";
-import { React, Fragment, useState } from "react";
-import MainCards from "./components/MainCards/MainCards";
-import ExtraCards from "./components/ExtraCards/ExtraCards";
-import UniSwap from "./components/UniSwap/UniSwap";
-import { useEffect } from "react";
-import axios from "axios";
 import PriceTable from "./components/PriceTable/PriceTable";
-
-//https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false
+import Dex from "./components/Dex/Dex";
+import * as React from "react";
+import ParachainAuction from "./components/ParachainAuction/ParachainAuction";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Nft from "./components/Nft/Nft";
+import YieldFarming from "./components/YieldFarming/YieldFarming";
+import TrendingCoins from "./components/TrendingCoins/TrendingCoins";
+import CoinPage from "./components/CoinPage/CoinPage";
+import GlobalStats from "./components/GlobalStats/GlobalStats";
+import Exchanges from "./components/Exchanges/Exchanges";
+import Portfolio from "./components/Portfolio/Portfolio";
 
 function App() {
-  const [priceData, setPriceData] = useState([]);
-  const [prices, setPrices] = useState([]);
-  useEffect(() => {
-    axios
-      .get(
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=5&page=1&sparkline=false"
-      )
-      .then((res) => {
-        setPriceData(res.data);
-      })
-      .catch((error) => console.log(error));
-  }, []);
-
-  useEffect(() => {
-    axios
-      .get(
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
-      )
-      .then((res) => {
-        setPrices(res.data);
-      })
-      .catch((error) => console.log(error));
-  }, []);
-
   return (
-    <Fragment>
-      <Header />
-      <TopFiveCrypto pricedata={priceData} />
-      <MainCards />
-      <ExtraCards />
-      <PriceTable prices={prices} />
-      <UniSwap />
-    </Fragment>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Header}></Route>
+        <Route path="/check-crypto-prices" exact component={PriceTable}></Route>
+        <Route path="/parachain-auctions" component={ParachainAuction}></Route>
+        <Route path="/dex-swap" component={Dex}></Route>
+        <Route path="/nft-collections" component={Nft}></Route>
+        <Route path="/yield-farming" component={YieldFarming}></Route>
+        <Route path="/trending-coins" component={TrendingCoins}></Route>
+        <Route path="/global-stats" component={GlobalStats}></Route>
+        <Route path="/exchanges" component={Exchanges}></Route>
+        <Route path="/coin-data/:coin" exact component={CoinPage}></Route>
+        <Route path="/user-portfolio" component={Portfolio}></Route>
+      </Switch>
+    </Router>
   );
 }
 
