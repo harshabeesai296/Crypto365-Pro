@@ -9,9 +9,13 @@ import MoonRiver from "../../img/moonriver.png";
 import Khala from "../../img/khala.png";
 import Shiden from "../../img/shiden.png";
 import Bifrost from "../../img/bifrost.png";
+import { Fragment } from "react";
+import * as React from "react";
+import { Link } from "react-router-dom";
+
 const ExtraCards = () => {
   return (
-    <>
+    <Fragment>
       <div className="extra-cards">
         <div className="yield-farming">
           <h1>
@@ -49,6 +53,7 @@ const ExtraCards = () => {
             ></img>
           </div>
         </div>
+
         <div className="kusama-parachain-auction">
           <h1>Checkout Parachain Auctions on Kusama & PolkaDot Networks </h1>
           <h3>
@@ -84,7 +89,7 @@ const ExtraCards = () => {
           </div>
         </div>
       </div>
-    </>
+    </Fragment>
   );
 };
 

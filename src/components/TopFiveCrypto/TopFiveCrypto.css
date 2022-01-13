@@ -3,6 +3,7 @@
   margin-bottom: 1px;
   text-align: center;
   font-size: 35px;
+  box-sizing: border-box;
 }
 
 .top-5-crypto {

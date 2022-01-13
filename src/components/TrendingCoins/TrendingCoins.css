@@ -1,0 +1,21 @@
+.trending-table {
+  border-collapse: collapse;
+  width: 90%;
+  margin-left: 5%;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin-top: 40px;
+}
+
+.trending-table th {
+  padding: 20px 20px 20px 20px;
+}
+
+.trending-table {
+  margin-bottom: 200px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}

@@ -1,8 +1,10 @@
-import React from "react";
 import "./PriceItem.css";
+import { Fragment } from "react";
+import * as React from "react";
+import { Link } from "react-router-dom";
 
 const PriceItem = ({
-  key,
+  id,
   rank,
   image,
   symbol,
@@ -14,8 +16,8 @@ const PriceItem = ({
   circsupply,
 }) => {
   return (
-    <>
-      <tr>
+    <Fragment>
+      <tr className="price-item-row">
         <td>{rank}</td>
         <td className="image-coin">
           <img
@@ -24,8 +26,10 @@ const PriceItem = ({
             style={{ height: "35px", width: "35px" }}
           ></img>
         </td>
-        <td>
-          <b>{name}</b>
+        <td className="coin-data-link">
+          <b>
+            <Link to={`/coin-data/${id.toLowerCase()}`}>{name}</Link>
+          </b>
         </td>
         <td style={{ color: "rgb(88, 102, 126)" }}>{symbol.toUpperCase()}</td>
         <td>${price.toLocaleString()}</td>
@@ -36,7 +40,7 @@ const PriceItem = ({
         <td>${marketcap.toLocaleString()}</td>
         <td>{circsupply.toLocaleString()}</td>
       </tr>
-    </>
+    </Fragment>
   );
 };
 

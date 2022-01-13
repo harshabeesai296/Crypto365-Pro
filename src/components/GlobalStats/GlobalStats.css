@@ -1,0 +1,59 @@
+.global-stats {
+  width: 85%;
+  height: 425px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-left: 7.5%;
+  border-radius: 10px;
+  margin-bottom: 200px;
+  font-size: 13.5px;
+}
+.stats {
+  width: 40%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 15px 15px 15px 15px;
+}
+
+.ico-stats {
+  width: 20%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px 10px 10px 10px;
+  margin-left: 10px;
+  margin-top: -190px;
+}
+
+.ico-header {
+  margin-bottom: 5px;
+}
+
+.price-dominance-stats {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px 10px 10px 10px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.last-updated {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+}

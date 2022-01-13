@@ -1,0 +1,22 @@
+.portfolio-buttons {
+  width: 50%;
+  margin-left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin-id {
+  margin: 50px 50px 50px 50px;
+}
+.coin-quantity {
+  margin: 50px 50px 50px 50px;
+}
+
+ul {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}

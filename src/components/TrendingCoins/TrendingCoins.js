@@ -1,15 +1,30 @@
-import "./Header.css";
-import headerImage from "../../img/headerpicture.png";
-import { Fragment } from "react";
-import * as React from "react";
-import GoogleLogin from "react-google-login";
-import TopFiveCrypto from "../TopFiveCrypto/TopFiveCrypto";
-import MainCards from "../MainCards/MainCards";
-import ExtraCards from "../ExtraCards/ExtraCards";
+import React, { Fragment } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import TrendingCoin from "../TrendingCoin/TrendingCoin";
+import "./TrendingCoins.css";
 import { Link } from "react-router-dom";
+import headerImage from "../../img/headerpicture.png";
+import GoogleLogin from "react-google-login";
 import Footer from "../Footer/Footer";
 
-const Header = () => {
+// helper api function
+import { coinFetcher } from "./apiFetcher";
+
+export default function TrendingCoins() {
+  const [trendingCoins, setTrendingCoins] = useState([]);
+
+  useEffect(() => {
+    const callHelper = async () => {
+      await coinFetcher(
+        "https://api.coingecko.com/api/v3/search/trending",
+        setTrendingCoins
+      );
+    };
+
+    callHelper();
+  }, []);
+
   function responseGoogle(response) {
     console.log(response);
     console.log(response.profileObj);
@@ -18,7 +33,6 @@ const Header = () => {
     console.log(response.profileObj.givenName);
     console.log(response.profileObj.imageUrl);
   }
-
   return (
     <Fragment>
       <div className="header-main">
@@ -31,7 +45,6 @@ const Header = () => {
             ></img>
           </div>
         </Link>
-
         <nav className="navbar">
           <div className="nav1">
             <a href="/check-crypto-prices">Check Crypto Prices</a>
@@ -52,7 +65,6 @@ const Header = () => {
             <a href="/trending-coins">Top 7 Trending</a>
           </div>
         </nav>
-
         <div className="google-login">
           <GoogleLogin
             clientId="358245853555-c4olpdkg8ombo7bd4iq8h95419uvn33o.apps.googleusercontent.com"
@@ -67,12 +79,32 @@ const Header = () => {
       </div>
       <hr className="line" />
 
-      <TopFiveCrypto />
-      <MainCards />
-      <ExtraCards />
+      <h1>Top 7 Trending Coins in last 24 hours</h1>
+      <table className="trending-table">
+        <tr>
+          <th>Trending Rank</th>
+          <th>Market Cap Rank</th>
+          <th>Coin Logo</th>
+          <th>Coin Name</th>
+          <th>Symbol</th>
+          <th>Price</th>
+        </tr>
+
+        {trendingCoins.map((coinInfo) => {
+          return (
+            <TrendingCoin
+              id={coinInfo.item.id}
+              name={coinInfo.item.name}
+              ticker={coinInfo.item.symbol}
+              rank={coinInfo.item.market_cap_rank}
+              image={coinInfo.item.small}
+              price={coinInfo.item.price_btc}
+              trendingRank={coinInfo.item.score}
+            />
+          );
+        })}
+      </table>
       <Footer />
     </Fragment>
   );
-};
-
-export default Header;
+}

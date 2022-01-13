@@ -1,0 +1,48 @@
+.dex {
+  width: 98%;
+  height: 300px;
+  margin-bottom: 200px;
+  margin-left: 1%;
+  padding: 30px 30px 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.uniswap,
+.pancakeswap,
+.sushiswap,
+.oneinch,
+.mdex,
+.quickswap {
+  width: 18%;
+  height: 40%;
+  border-radius: 50px;
+  margin-bottom: 100px;
+}
+
+.uniswap:hover,
+.pancakeswap:hover,
+.sushiswap:hover,
+.oneinch:hover,
+.mdex:hover,
+.quickswap:hover {
+  transform: scale(1.015);
+}
+
+.uniswap:hover,
+.pancakeswap:hover,
+.sushiswap:hover,
+.oneinch:hover,
+.mdex:hover,
+.quickswap:hover {
+  background-color: rgb(225, 229, 235);
+  cursor: pointer;
+}
+
+.dex-header {
+  text-align: center;
+  margin-top: 100px;
+}

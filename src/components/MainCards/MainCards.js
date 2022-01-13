@@ -14,10 +14,12 @@ import Rarible from "../../img/rarible.png";
 import Mana from "../../img/mana.png";
 import Chz from "../../img/chiliz.png";
 import Flow from "../../img/flow.png";
+import { Fragment } from "react";
+import * as React from "react";
 
 const MainCards = () => {
   return (
-    <>
+    <Fragment>
       <h1 className="main-cards-header">Things you can do on Crypto365</h1>
       <div className="main-cards">
         <div className="check-crypto-prices">
@@ -54,6 +56,7 @@ const MainCards = () => {
             ></img>
           </div>
         </div>
+
         <div className="dex-swap">
           <h1>Swap your favorite ERC-20, BEP-20 & more tokens on DEXs </h1>
           <h3>
@@ -122,10 +125,8 @@ const MainCards = () => {
             ></img>
           </div>
         </div>
-
-        <div className="main-cards-2"></div>
       </div>
-    </>
+    </Fragment>
   );
 };
 

@@ -10,11 +10,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .check-crypto-prices {
   width: 31%;
-  height: 85%;
+  height: 100%;
   background-color: rgb(239, 242, 245);
   border-radius: 10px;
   text-align: center;
@@ -27,10 +28,37 @@
   padding-right: 5px;
   margin-left: 5px;
 }
+.check-crypto-prices h1,
+.dex-swap h1,
+.check-nft-collections h1 {
+  margin-top: 20px;
+}
+
+.check-crypto-prices:hover {
+  background-color: rgb(225, 229, 235);
+  cursor: pointer;
+}
+
+.dex-swap:hover {
+  background-color: rgb(225, 229, 235);
+  cursor: pointer;
+}
+.check-nft-collections:hover {
+  background-color: rgb(225, 229, 235);
+  cursor: pointer;
+}
+.dex-swap:hover {
+  background-color: rgb(225, 229, 235);
+  cursor: pointer;
+}
+.yield-farming:hover {
+  background-color: rgb(225, 229, 235);
+  cursor: pointer;
+}
 
 .dex-swap {
   width: 31%;
-  height: 85%;
+  height: 100%;
   background-color: rgb(239, 242, 245);
   border-radius: 10px;
   text-align: center;
@@ -46,7 +74,7 @@
 
 .check-nft-collections {
   width: 31%;
-  height: 85%;
+  height: 100%;
   background-color: rgb(239, 242, 245);
   border-radius: 10px;
   text-align: center;

@@ -1,0 +1,21 @@
+.exchange-table {
+  border-collapse: collapse;
+  width: 96%;
+  margin-left: 2%;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin-top: 40px;
+}
+
+.exchange-table th {
+  padding: 20px 20px 20px 20px;
+}
+
+.exchange-table {
+  margin-bottom: 200px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}

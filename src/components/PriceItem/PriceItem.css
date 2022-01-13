@@ -1,37 +1,23 @@
-td {
-  height: 75px;
+.price-item-row td {
+  height: 50px;
   width: auto;
   text-align: center;
   vertical-align: middle;
   border-bottom: 1px solid #ddd;
 }
-tr {
+.price-item-row tr {
   border-collapse: collapse;
 }
 
-tr:hover {
-  background-color: rgb(239, 242, 245);
+.price-item-row:hover {
+  background-color: #eff2f5;
 }
 
-.name-symbol {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-right: 20px;
+.coin-data-link a {
+  text-decoration: none;
+  color: black;
 }
 
-.coin-name {
-  margin-left: -10px;
-}
-
-.image-coin {
-  width: 125px;
-}
-
-.red {
-  color: red;
-}
-
-.green {
-  color: green;
+.coin-data-link a:hover {
+  color: black;
 }

@@ -1,0 +1,14 @@
+.exchange-row td {
+  height: 60px;
+  width: 150px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+}
+.exchange-row tr {
+  border-collapse: collapse;
+}
+
+.exchange-row:hover {
+  background-color: #eff2f5;
+}

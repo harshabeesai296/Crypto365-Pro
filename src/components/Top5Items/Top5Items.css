@@ -4,8 +4,14 @@
   align-items: flex-start;
   flex-direction: column;
   line-height: 15px;
+  box-sizing: border-box;
 }
 
 .marketcapitem {
   margin-top: 5px;
+}
+
+.crypto-1:hover {
+  background-color: rgb(225, 229, 235);
+  cursor: pointer;
 }

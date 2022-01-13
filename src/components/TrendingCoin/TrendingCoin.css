@@ -1,0 +1,14 @@
+.trending-coin-row td {
+  height: 55px;
+  width: 150px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+}
+.trending-coin-row tr {
+  border-collapse: collapse;
+}
+
+.trending-coin-row:hover {
+  background-color: #eff2f5;
+}

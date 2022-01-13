@@ -1,4 +1,5 @@
 import "./Top5Items.css";
+import * as React from "react";
 
 const Top5Items = ({
   key,
